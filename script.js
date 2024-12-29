@@ -1,8 +1,8 @@
 //complete this code
 class Rectangle {
   constructor(width, height) {
-    this._width = width;  // Private variable for width
-    this._height = height;  // Private variable for height
+    this._width = width;
+    this._height = height;
   }
 
   // Getter for width
@@ -15,20 +15,21 @@ class Rectangle {
     return this._height;
   }
 
-  // Method to calculate area of the rectangle
+  // Method to calculate and return the area of the rectangle
   getArea() {
     return this._width * this._height;
   }
 }
 
-// Square class extends Rectangle
+// Square subclass that extends Rectangle
 class Square extends Rectangle {
   constructor(side) {
-    super(side, side);  // A square is a rectangle with equal width and height
+    // Call the Rectangle constructor with equal width and height
+    super(side, side);
   }
-
-  // Method to calculate perimeter of the square
+  
+  // Optional: Method to calculate and return the perimeter of the square
   getPerimeter() {
-    return 4 * this.width;  // Since all sides are equal, we can use width or height
+    return 4 * this.width; // Since width and height are the same for a square
   }
 }
